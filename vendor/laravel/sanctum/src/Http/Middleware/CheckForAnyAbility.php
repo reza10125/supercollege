@@ -28,7 +28,7 @@ class CheckForAnyAbility
                 return $next($request);
             }
         }
-
+        return response('Unauthorized',401);
         throw new MissingAbilityException($abilities);
     }
 }

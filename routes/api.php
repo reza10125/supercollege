@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\Admin\AdminController;
+use App\Http\Controllers\Api\AdminLoginController;
+use App\Http\Controllers\Api\AdminSignupController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['auth:sanctum', 'auth:admin', 'ability:*'])
+    ->prefix('/v1/admin')->group(function () {
+        Route::get('/get-data', AdminController::class);
+    });
+// admin refresh token
+Route::middleware(['auth:sanctum', 'auth:admin', 'ability:update:server'])
+    ->prefix('/v1/admin')->group(function () {
+        Route::put('/refresh-token', [AdminLoginController::class,'refresh_token']);
+    });
+// admin signup
+Route::prefix('/v1/admin')->group(function () {
+    Route::post('/signup', AdminSignupController::class);
+    Route::post('/login', AdminLoginController::class);
 });
