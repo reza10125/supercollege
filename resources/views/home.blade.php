@@ -589,7 +589,7 @@
                                         <div class="card h-100">
                                             <div class="card-body text-body d-flex flex-column justify-content-between h-100">
                                                 <div class="mb-3">
-                                                    <img src="../../assets/img/front-pages/branding/logo-1.png" alt="client logo" class="client-logo img-fluid" />
+                                                    <img src="{{asset('assets/img/front-pages/branding/logo-1.png')}}" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
                                                     “UMS Pro: Without a doubt, the most indispensable solution for our university’s digital transformation. Its seamless interface, intuitive features, and robust functionality have revolutionized our administrative processes. From student enrollment to faculty management, UMS Pro has been a game-changer. I eagerly look forward to utilizing it in all our future endeavors.”
@@ -603,7 +603,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-center">
                                                     <div class="avatar me-2 avatar-sm">
-                                                        <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                                                        <img src="{{asset('assets/img/avatars/1.png')}}" alt="Avatar" class="rounded-circle" />
                                                     </div>
                                                     <div>
                                                         <h6 class="mb-0">Cecilia Payne</h6>
@@ -617,7 +617,7 @@
                                         <div class="card h-100">
                                             <div class="card-body text-body d-flex flex-column justify-content-between h-100">
                                                 <div class="mb-3">
-                                                    <img src="../../assets/img/front-pages/branding/logo-2.png" alt="client logo" class="client-logo img-fluid" />
+                                                    <img src="{{asset('assets/img/front-pages/branding/logo-2.png')}}" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
                                                     “UMS Flex: Unquestionably the most adaptable and dynamic solution for our university’s digital infrastructure. Whether it’s student records, faculty communication, or administrative dashboards, UMS Flex is my go-to choice. Its versatility empowers us to build efficient systems for any academic project.”
@@ -631,7 +631,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-center">
                                                     <div class="avatar me-2 avatar-sm">
-                                                        <img src="../../assets/img/avatars/2.png" alt="Avatar" class="rounded-circle" />
+                                                        <img src="{{asset('assets/img/avatars/2.png')}}" alt="Avatar" class="rounded-circle" />
                                                     </div>
                                                     <div>
                                                         <h6 class="mb-0">Eugenia Moore</h6>
@@ -645,7 +645,7 @@
                                         <div class="card h-100">
                                             <div class="card-body text-body d-flex flex-column justify-content-between h-100">
                                                 <div class="mb-3">
-                                                    <img src="../../assets/img/front-pages/branding/logo-3.png" alt="client logo" class="client-logo img-fluid" />
+                                                    <img src="{{asset('assets/img/front-pages/branding/logo-3.png')}}" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
                                                     “UMS Clarity: A meticulously crafted solution that combines elegance with functionality. Its clean design and well-organized documentation make it a breeze for administrators, faculty, and students alike. Whether you’re navigating through student profiles or configuring system settings, UMS Clarity ensures a seamless experience. Plus, finding relevant screenshots is as effortless as a click.”
@@ -659,7 +659,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-center">
                                                     <div class="avatar me-2 avatar-sm">
-                                                        <img src="../../assets/img/avatars/3.png" alt="Avatar" class="rounded-circle" />
+                                                        <img src="{{asset('assets/img/avatars/3.png')}}" alt="Avatar" class="rounded-circle" />
                                                     </div>
                                                     <div>
                                                         <h6 class="mb-0">Curtis Fletcher</h6>
@@ -673,7 +673,7 @@
                                         <div class="card h-100">
                                             <div class="card-body text-body d-flex flex-column justify-content-between h-100">
                                                 <div class="mb-3">
-                                                    <img src="../../assets/img/front-pages/branding/logo-4.png" alt="client logo" class="client-logo img-fluid" />
+                                                    <img src="{{asset('assets/img/front-pages/branding/logo-4.png')}}" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
                                                     “UMS DevCraft: A developer’s dream come true! With meticulous attention to detail, UMS DevCraft caters to every coding need. Its robust architecture and well-documented APIs empower developers to craft custom interfaces effortlessly. Whether it’s designing student portals, faculty dashboards, or administrative tools, UMS DevCraft ensures a seamless development journey.”
@@ -687,7 +687,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-center">
                                                     <div class="avatar me-2 avatar-sm">
-                                                        <img src="../../assets/img/avatars/4.png" alt="Avatar" class="rounded-circle" />
+                                                        <img src="{{asset('assets/img/avatars/4.png')}}" alt="Avatar" class="rounded-circle" />
                                                     </div>
                                                     <div>
                                                         <h6 class="mb-0">Sara Smith</h6>
@@ -701,7 +701,7 @@
                                         <div class="card h-100">
                                             <div class="card-body text-body d-flex flex-column justify-content-between h-100">
                                                 <div class="mb-3">
-                                                    <img src="../../assets/img/front-pages/branding/logo-5.png" alt="client logo" class="client-logo img-fluid" />
+                                                    <img src="{{asset('assets/img/front-pages/branding/logo-5.png')}}" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
                                                     “UMS Flex: Unquestionably the most adaptable and dynamic solution for our university’s digital infrastructure. Whether it’s student records, faculty communication, or administrative dashboards, UMS Flex is my go-to choice. Its versatility empowers us to build efficient systems for any academic project.”
@@ -715,7 +715,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-center">
                                                     <div class="avatar me-2 avatar-sm">
-                                                        <img src="../../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                                        <img src="{{asset('assets/img/avatars/5.png')}}" alt="Avatar" class="rounded-circle" />
                                                     </div>
                                                     <div>
                                                         <h6 class="mb-0">Eugenia Moore</h6>
@@ -729,7 +729,7 @@
                                         <div class="card h-100">
                                             <div class="card-body text-body d-flex flex-column justify-content-between h-100">
                                                 <div class="mb-3">
-                                                    <img src="../../assets/img/front-pages/branding/logo-6.png" alt="client logo" class="client-logo img-fluid" />
+                                                    <img src="{{asset('assets/img/front-pages/branding/logo-6.png')}}" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
                                                     “UMS Ipsum: UMS Ipsum provides seamless integration, robust features, and unparalleled flexibility for academic institutions. Whether it’s student enrollment, faculty management, or administrative workflows, UMS Ipsum ensures a streamlined experience.”
@@ -743,7 +743,7 @@
                                                 </div>
                                                 <div class="d-flex align-items-center">
                                                     <div class="avatar me-2 avatar-sm">
-                                                        <img src="../../assets/img/avatars/1.png" alt="Avatar" class="rounded-circle" />
+                                                        <img src="{{asset('assets/img/avatars/1.png')}}" alt="Avatar" class="rounded-circle" />
                                                     </div>
                                                     <div>
                                                         <h6 class="mb-0">Sara Smith</h6>
@@ -769,19 +769,19 @@
                     <div class="swiper" id="swiper-clients-logos">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="../../assets/img/front-pages/branding/logo_1-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_1-light.png" data-app-dark-img="front-pages/branding/logo_1-dark.png" />
+                                <img src="{{asset('assets/img/front-pages/branding/logo_1-light.png')}}" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_1-light.png" data-app-dark-img="front-pages/branding/logo_1-dark.png" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="../../assets/img/front-pages/branding/logo_2-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_2-light.png" data-app-dark-img="front-pages/branding/logo_2-dark.png" />
+                                <img src="{{asset('assets/img/front-pages/branding/logo_2-light.png')}}" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_2-light.png" data-app-dark-img="front-pages/branding/logo_2-dark.png" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="../../assets/img/front-pages/branding/logo_3-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_3-light.png" data-app-dark-img="front-pages/branding/logo_3-dark.png" />
+                                <img src="{{asset('assets/img/front-pages/branding/logo_3-light.png')}}" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_3-light.png" data-app-dark-img="front-pages/branding/logo_3-dark.png" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="../../assets/img/front-pages/branding/logo_4-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_4-light.png" data-app-dark-img="front-pages/branding/logo_4-dark.png" />
+                                <img src="{{asset('assets/img/front-pages/branding/logo_4-light.png')}}" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_4-light.png" data-app-dark-img="front-pages/branding/logo_4-dark.png" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="../../assets/img/front-pages/branding/logo_5-light.png" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_5-light.png" data-app-dark-img="front-pages/branding/logo_5-dark.png" />
+                                <img src="{{asset('assets/img/front-pages/branding/logo_5-light.png')}}" alt="client logo" class="client-logo" data-app-light-img="front-pages/branding/logo_5-light.png" data-app-dark-img="front-pages/branding/logo_5-dark.png" />
                             </div>
                         </div>
                     </div>
@@ -803,7 +803,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="card mt-3 mt-lg-0 shadow-none">
                             <div class="bg-label-dribbble position-relative team-image-box">
-                                <img src="../../assets/img/front-pages/landing-page/team-member-1.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+                                <img src="{{asset('assets/img/front-pages/landing-page/team-member-1.png')}}" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
                             </div>
                             <div class="card-body border border-top-0 border-label-primary text-center">
                                 <h5 class="card-title mb-0">Sophie Gilbert</h5>
@@ -814,7 +814,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="card mt-3 mt-lg-0 shadow-none">
                             <div class="bg-label-info position-relative team-image-box">
-                                <img src="../../assets/img/front-pages/landing-page/team-member-2.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+                                <img src="{{asset('assets/img/front-pages/landing-page/team-member-2.png')}}" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
                             </div>
                             <div class="card-body border border-top-0 border-label-info text-center">
                                 <h5 class="card-title mb-0">Paul Miles</h5>
@@ -825,7 +825,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="card mt-3 mt-lg-0 shadow-none">
                             <div class="bg-label-danger position-relative team-image-box">
-                                <img src="../../assets/img/front-pages/landing-page/team-member-3.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+                                <img src="{{asset('assets/img/front-pages/landing-page/team-member-3.png')}}" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
                             </div>
                             <div class="card-body border border-top-0 border-label-danger text-center">
                                 <h5 class="card-title mb-0">Nannie Ford</h5>
@@ -836,7 +836,7 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="card mt-3 mt-lg-0 shadow-none">
                             <div class="bg-label-success position-relative team-image-box">
-                                <img src="../../assets/img/front-pages/landing-page/team-member-4.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+                                <img src="{{asset('assets/img/front-pages/landing-page/team-member-4.png')}}" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
                             </div>
                             <div class="card-body border border-top-0 border-label-success text-center">
                                 <h5 class="card-title mb-0">Chris Watkins</h5>
@@ -872,7 +872,7 @@
                             <span class="switch-label">Pay Annual</span>
                         </label>
                         <div class="pricing-plans-item position-absolute d-flex">
-                            <img src="../../assets/img/front-pages/icons/pricing-plans-arrow.png" alt="pricing plans arrow" class="scaleX-n1-rtl" />
+                            <img src="{{asset('assets/img/front-pages/icons/pricing-plans-arrow.png')}}" alt="pricing plans arrow" class="scaleX-n1-rtl" />
                             <span class="fw-semibold mt-2 ms-1"> Save 25%</span>
                         </div>
                     </div>
@@ -883,7 +883,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="text-center">
-                                    <img src="../../assets/img/front-pages/icons/paper-airplane.png" alt="paper airplane icon" class="mb-4 pb-2" />
+                                    <img src="{{asset('assets/img/front-pages/icons/paper-airplane.png')}}" alt="paper airplane icon" class="mb-4 pb-2" />
                                     <h4 class="mb-1">Basic</h4>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <span class="price-monthly h1 text-primary fw-bold mb-0">$19</span>
@@ -954,7 +954,7 @@
                         <div class="card border border-primary shadow-lg" style="border-color: #ea4c89 !important;">
                             <div class="card-header">
                                 <div class="text-center">
-                                    <img src="../../assets/img/front-pages/icons/plane.png" alt="plane icon" class="mb-4 pb-2" />
+                                    <img src="{{asset('assets/img/front-pages/icons/plane.png')}}" alt="plane icon" class="mb-4 pb-2" />
                                     <h4 class="mb-1">Standard</h4>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <span class="price-monthly h1 text-primary fw-bold mb-0">$29</span>
@@ -1025,7 +1025,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="text-center">
-                                    <img src="../../assets/img/front-pages/icons/shuttle-rocket.png" alt="shuttle rocket icon" class="mb-4 pb-2" />
+                                    <img src="{{asset('assets/img/front-pages/icons/shuttle-rocket.png')}}" alt="shuttle rocket icon" class="mb-4 pb-2" />
                                     <h4 class="mb-1">Enterprise</h4>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <span class="price-monthly h1 text-primary fw-bold mb-0">$49</span>
@@ -1101,7 +1101,7 @@
                     <div class="col-sm-6 col-lg-3">
                         <div class="card border border-label-primary shadow-none">
                             <div class="card-body text-center">
-                                <img src="../../assets/img/front-pages/icons/laptop.png" alt="laptop" class="mb-2" />
+                                <img src="{{asset('assets/img/front-pages/icons/laptop.png')}}" alt="laptop" class="mb-2" />
                                 <h5 class="h2 mb-1">7.1k+</h5>
                                 <p class="fw-medium mb-0">
                                     Support Tickets<br />
@@ -1113,7 +1113,7 @@
                     <div class="col-sm-6 col-lg-3">
                         <div class="card border border-label-success shadow-none">
                             <div class="card-body text-center">
-                                <img src="../../assets/img/front-pages/icons/user-success.png" alt="laptop" class="mb-2" />
+                                <img src="{{asset('assets/img/front-pages/icons/user-success.png')}}" alt="laptop" class="mb-2" />
                                 <h5 class="h2 mb-1">50k+</h5>
                                 <p class="fw-medium mb-0">
                                     Join creatives<br />
@@ -1125,7 +1125,7 @@
                     <div class="col-sm-6 col-lg-3">
                         <div class="card border border-label-info shadow-none">
                             <div class="card-body text-center">
-                                <img src="../../assets/img/front-pages/icons/diamond-info.png" alt="laptop" class="mb-2" />
+                                <img src="{{asset('assets/img/front-pages/icons/diamond-info.png')}}" alt="laptop" class="mb-2" />
                                 <h5 class="h2 mb-1">4.8/5</h5>
                                 <p class="fw-medium mb-0">
                                     Highly Rated<br />
@@ -1137,7 +1137,7 @@
                     <div class="col-sm-6 col-lg-3">
                         <div class="card border border-label-warning shadow-none">
                             <div class="card-body text-center">
-                                <img src="../../assets/img/front-pages/icons/check-warning.png" alt="laptop" class="mb-2" />
+                                <img src="{{asset('assets/img/front-pages/icons/check-warning.png')}}" alt="laptop" class="mb-2" />
                                 <h5 class="h2 mb-1">100%</h5>
                                 <p class="fw-medium mb-0">
                                     Money Back<br />
@@ -1162,7 +1162,7 @@
                 <div class="row gy-5">
                     <div class="col-lg-5">
                         <div class="text-center">
-                            <img src="../../assets/img/front-pages/landing-page/faq-boy-with-logos.png" alt="faq boy with logos" class="faq-image" />
+                            <img src="{{asset('assets/img/front-pages/landing-page/faq-boy-with-logos.png')}}" alt="faq boy with logos" class="faq-image" />
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -1257,7 +1257,7 @@
                         <a href="payment-page.html" class="btn btn-lg btn-dribbble">Get Started</a>
                     </div>
                     <div class="col-lg-6 pt-lg-5 text-center text-lg-end">
-                        <img src="../../assets/img/front-pages/landing-page/cta-dashboard.png" alt="cta dashboard" class="img-fluid" />
+                        <img src="{{asset('assets/img/front-pages/landing-page/cta-dashboard.png')}}" alt="cta dashboard" class="img-fluid" />
                     </div>
                 </div>
             </div>
@@ -1275,7 +1275,7 @@
                 <div class="row gy-4">
                     <div class="col-lg-5">
                         <div class="contact-img-box position-relative border p-2 h-100">
-                            <img src="../../assets/img/front-pages/landing-page/contact-customer-service.png" alt="contact customer service" class="contact-img w-100 scaleX-n1-rtl" />
+                            <img src="{{asset('assets/img/front-pages/landing-page/contact-customer-service.png')}}" alt="contact customer service" class="contact-img w-100 scaleX-n1-rtl" />
                             <div class="pt-3 px-4 pb-1">
                                 <div class="row gy-3 gx-md-4">
                                     <div class="col-md-6 col-lg-12 col-xl-6">
@@ -1409,8 +1409,10 @@
                     </div>
                     <div class="col-lg-3 col-md-4">
                         <h6 class="footer-title mb-4">Download our app</h6>
-                        <a href="javascript:void(0);" class="d-block footer-link mb-3 pb-2"><img src="../../assets/img/front-pages/landing-page/apple-icon.png" alt="apple icon" /></a>
-                        <a href="javascript:void(0);" class="d-block footer-link"><img src="../../assets/img/front-pages/landing-page/google-play-icon.png" alt="google play icon" /></a>
+                        <a href="javascript:void(0);" class="d-block footer-link mb-3 pb-2">
+                            <img src="{{asset('assets/img/front-pages/landing-page/apple-icon.png')}}" alt="apple icon" /></a>
+                        <a href="javascript:void(0);" class="d-block footer-link">
+                            <img src="{{asset('assets/img/front-pages/landing-page/google-play-icon.png')}}" alt="google play icon" /></a>
                     </div>
                 </div>
             </div>
