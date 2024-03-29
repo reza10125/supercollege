@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>UV System | UV - School, collage, university system</title>
+    <title>UMS - School, collage, university system</title>
 
     <meta name="description" content="" />
 
@@ -42,6 +42,117 @@
     <script src="{{asset('assets/vendor/js/template-customizer.js')}}"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{asset('assets/js/front-config.js')}}"></script>
+    <style>
+        .chatbot {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 30px;
+
+        }
+
+        .chat-window {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f8f8f8;
+            display: none;
+
+            background-image: url('_27b86870-c156-4fa2-bd43-384e33063f48.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+
+        .chat-header {
+            background-color: #007bff;
+            color: white;
+            padding: 5px;
+            border-radius: 5px 5px 0 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
+        .chat-body {
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        .chat-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 5px;
+            left: 0;
+        }
+
+        .chat-input {
+            width: calc(100% - 60px);
+        }
+
+        .send-btn {
+            width: 50px;
+        }
+
+        .chat-avater {
+            width: 32px !important;
+            height: 32px !important;
+        }
+
+        #chat-toggle {
+            box-shadow: (21, 131, 227) 2px 2px 15px, rgb(21, 131, 227) -2px -4px 9px;
+            width: 50px;
+            height: 50px;
+        }
+
+        #message-box:focus {
+            box-shadow: none;
+        }
+
+        .dark-style #template-customizer .template-customizer-open-btn {
+            background: #ea4c89;
+        }
+
+        .dark-style .layout-navbar .navbar.landing-navbar .navbar-nav .show>.nav-link,
+        .dark-style .layout-navbar .navbar.landing-navbar .navbar-nav .active>.nav-link,
+        .dark-style .layout-navbar .navbar.landing-navbar .navbar-nav .nav-link.show,
+        .dark-style .layout-navbar .navbar.landing-navbar .navbar-nav .nav-link.active {
+            color: #ea4c89 !important;
+        }
+
+        .navbar.landing-navbar .navbar-nav .show>.nav-link,
+        .navbar.landing-navbar .navbar-nav .active>.nav-link,
+        .navbar.landing-navbar .navbar-nav .nav-link.show,
+        .navbar.landing-navbar .navbar-nav .nav-link.active,
+        .navbar.landing-navbar .navbar-nav .nav-link:hover {
+            color: #ea4c89 !important;
+        }
+
+        .text-primary {
+            color: #ea4c89 !important;
+        }
+
+        .switch-input:checked~.switch-toggle-slider {
+            background: #ea4c89 !important;
+            border-color: #ea4c89 !important;
+            color: #fff;
+        }
+
+        .switch-primary.switch .switch-input:checked~.switch-toggle-slider {
+            background: #7367f0;
+            border-color: #ea4c89 !important;
+            color: #fff;
+        }
+
+        .switch-toggle-slider {
+            border: 1px solid #ea4c89 !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -61,14 +172,9 @@
                     <!-- Mobile menu toggle: End-->
                     <a href="landing-page.html" class="app-brand-link">
                         <span class="app-brand-logo demo">
-                            <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z" fill="#7367F0" />
-                                <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z" fill="#161616" />
-                                <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z" fill="#161616" />
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z" fill="#7367F0" />
-                            </svg>
+                            <img src="{{asset('assets/img/branding/logo-removebg-preview.png')}}" class="img-fluid" alt="UMS">
                         </span>
-                        <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">UV</span>
+                        <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">UMS</span>
                     </a>
                 </div>
                 <!-- Menu logo wrapper: End -->
@@ -79,21 +185,21 @@
                     </button>
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" aria-current="page" href="landing-page.html#landingHero">Home</a>
+                            <a class="nav-link fw-medium" aria-current="page" href="#landingHero">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" href="landing-page.html#landingFeatures">Features</a>
+                            <a class="nav-link fw-medium" href="#landingFeatures">Features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" href="landing-page.html#landingTeam">Team</a>
+                            <a class="nav-link fw-medium" href="#landingTeam">Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" href="landing-page.html#landingFAQ">FAQ</a>
+                            <a class="nav-link fw-medium" href="#landingFAQ">FAQ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-medium" href="landing-page.html#landingContact">Contact us</a>
+                            <a class="nav-link fw-medium" href="#landingContact">Contact us</a>
                         </li>
-                        <li class="nav-item mega-dropdown">
+                        <li class="nav-item mega-dropdown d-none">
                             <a href="javascript:void(0);" class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium" aria-expanded="false" data-bs-toggle="mega-dropdown" data-trigger="hover">
                                 <span data-i18n="Pages">Pages</span>
                             </a>
@@ -102,7 +208,7 @@
                                     <div class="col-12 col-lg">
                                         <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
                                             <div class="avatar avatar-sm flex-shrink-0 me-2">
-                                                <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-layout-grid"></i></span>
+                                                <span class="avatar-initial rounded bg-label-dribbble"><i class="ti ti-layout-grid"></i></span>
                                             </div>
                                             <span class="ps-1">Other</span>
                                         </div>
@@ -136,7 +242,7 @@
                                     <div class="col-12 col-lg">
                                         <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
                                             <div class="avatar avatar-sm flex-shrink-0 me-2">
-                                                <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-lock-open"></i></span>
+                                                <span class="avatar-initial rounded bg-label-dribbble"><i class="ti ti-lock-open"></i></span>
                                             </div>
                                             <span class="ps-1">Auth Demo</span>
                                         </div>
@@ -200,7 +306,7 @@
                                     <div class="col-12 col-lg">
                                         <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
                                             <div class="avatar avatar-sm flex-shrink-0 me-2">
-                                                <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-file-analytics"></i></span>
+                                                <span class="avatar-initial rounded bg-label-dribbble"><i class="ti ti-file-analytics"></i></span>
                                             </div>
                                             <span class="ps-1">Other</span>
                                         </div>
@@ -263,7 +369,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-none">
                             <a class="nav-link fw-medium" href="../vertical-menu-template/index.html" target="_blank">Admin</a>
                         </li>
                     </ul>
@@ -299,7 +405,7 @@
 
                     <!-- navbar button: Start -->
                     <li>
-                        <a href="../vertical-menu-template/auth-login-cover.html" class="btn btn-primary" target="_blank"><span class="tf-icons ti ti-login scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
+                        <a href="../vertical-menu-template/auth-login-cover.html" class="btn btn-outline-dribbble" target="_blank"><span class="tf-icons ti ti-login scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
                     </li>
                     <!-- navbar button: End -->
                 </ul>
@@ -317,19 +423,18 @@
             <div id="landingHero" class="section-py landing-hero position-relative">
                 <div class="container">
                     <div class="hero-text-box text-center">
-                        <h1 class="text-primary hero-title display-6 fw-bold">One dashboard to manage all your businesses</h1>
+                        <h1 class="text-primary hero-title display-6 fw-bold">One dashboard to manage all your addministrative service</h1>
                         <h2 class="hero-sub-title h6 mb-4 pb-1">
-                            Production-ready & easy to use Admin Template<br class="d-none d-lg-block" />
-                            for Reliability and Customizability.
+                            UMS empowers educational institutions to operate efficiently, enhance transparency, and provide better services to their stakeholders.
                         </h2>
                         <div class="landing-hero-btn d-inline-block position-relative">
                             <span class="hero-btn-item position-absolute d-none d-md-flex text-heading">Join community
                                 <img src="../../assets/img/front-pages/icons/Join-community-arrow.png" alt="Join community arrow" class="scaleX-n1-rtl" /></span>
-                            <a href="#landingPricing" class="btn btn-primary btn-lg">Get early access</a>
+                            <a href="#landingPricing" class="btn btn-dribbble btn-lg">Get early access</a>
                         </div>
                     </div>
                     <div id="heroDashboardAnimation" class="hero-animation-img">
-                        <a href="../vertical-menu-template/app-ecommerce-dashboard.html" target="_blank">
+                        <a href="#">
                             <div id="heroAnimationImg" class="position-relative hero-dashboard-img">
                                 <img src="../../assets/img/front-pages/landing-page/hero-dashboard-light.png" alt="hero dashboard" class="animation-img" data-app-light-img="front-pages/landing-page/hero-dashboard-light.png" data-app-dark-img="front-pages/landing-page/hero-dashboard-dark.png" />
                                 <img src="../../assets/img/front-pages/landing-page/hero-elements-light.png" alt="hero elements" class="position-absolute hero-elements-img animation-img top-0 start-0" data-app-light-img="front-pages/landing-page/hero-elements-light.png" data-app-dark-img="front-pages/landing-page/hero-elements-dark.png" />
@@ -346,49 +451,50 @@
         <section id="landingFeatures" class="section-py landing-features">
             <div class="container">
                 <div class="text-center mb-3 pb-1">
-                    <span class="badge bg-label-primary">Useful Features</span>
+                    <span class="badge bg-label-dribbble">Useful Features</span>
                 </div>
                 <h3 class="text-center mb-1">
-                    <span class="section-title">Everything you need</span> to start your next project
+                    <!-- <span class="section-title">Everything you need</span> to start your next project -->
+                    Empowering Academic Excellence: Your Gateway <br> to Seamless University Management
                 </h3>
                 <p class="text-center mb-3 mb-md-5 pb-3">
-                    Not just a set of tools, the package includes ready-to-deploy conceptual application.
+                    Not just a set of tools, the package includes all your administrative services.
                 </p>
                 <div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
                             <img src="../../assets/img/front-pages/icons/laptop.png" alt="laptop charging" />
                         </div>
-                        <h5 class="mb-3">Quality Code</h5>
+                        <h5 class="mb-3">Centralized Admission</h5>
                         <p class="features-icon-description">
-                            Code structure that all developers will easily understand and fall in love with.
+                            Simplifies student enrollment by providing a unified platform for application submission, document verification, and admission decision tracking.
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
                             <img src="../../assets/img/front-pages/icons/rocket.png" alt="transition up" />
                         </div>
-                        <h5 class="mb-3">Continuous Updates</h5>
+                        <h5 class="mb-3">Centralized Examination</h5>
                         <p class="features-icon-description">
-                            Free updates for the next 12 months, including new demos and features.
+                            Manages exam scheduling, question paper generation, result processing, and grade distribution. Faculty members can input grades, and students can access their results securely.
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
                             <img src="../../assets/img/front-pages/icons/paper.png" alt="edit" />
                         </div>
-                        <h5 class="mb-3">Stater-Kit</h5>
+                        <h5 class="mb-3">Attendance Tracking</h5>
                         <p class="features-icon-description">
-                            Start your project quickly without having to remove unnecessary features.
+                            Monitors student attendance, generates reports, and alerts administrators about irregularities.
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
                             <img src="../../assets/img/front-pages/icons/check.png" alt="3d select solid" />
                         </div>
-                        <h5 class="mb-3">API Ready</h5>
+                        <h5 class="mb-3">Course Management</h5>
                         <p class="features-icon-description">
-                            Just change the endpoint and see your own data loaded within seconds.
+                            Facilitates course creation, assignment submission, and syllabus distribution. Professors can upload course materials, assignments, and lecture notes.
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
@@ -402,8 +508,50 @@
                         <div class="text-center mb-3">
                             <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
                         </div>
-                        <h5 class="mb-3">Well Documented</h5>
-                        <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
+                        <h5 class="mb-3">Student Information System</h5>
+                        <p class="features-icon-description">Stores and manages student profiles, academic records, and personal details. It ensures data accuracy and privacy.</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                        <div class="text-center mb-3">
+                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                        </div>
+                        <h5 class="mb-3">Faculty Management</h5>
+                        <p class="features-icon-description">Allows faculty members to update their profiles, view teaching schedules, and communicate with students.</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                        <div class="text-center mb-3">
+                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                        </div>
+                        <h5 class="mb-3">Financial Management</h5>
+                        <p class="features-icon-description">Handles fee collection, expense tracking, and budget allocation. Generates financial reports for analysis.</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                        <div class="text-center mb-3">
+                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                        </div>
+                        <h5 class="mb-3">Library Integration</h5>
+                        <p class="features-icon-description">Tracks book inventory, borrowing, and returns. Students can search for available resources and reserve books online.</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                        <div class="text-center mb-3">
+                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                        </div>
+                        <h5 class="mb-3">Communication Portal</h5>
+                        <p class="features-icon-description">Enables seamless communication between students, faculty, and administrators. Announcements, notifications, and event updates are centralized.</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                        <div class="text-center mb-3">
+                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                        </div>
+                        <h5 class="mb-3">Personal Profiles</h5>
+                        <p class="features-icon-description"> Each user (student, faculty, or staff) has a personalized dashboard displaying relevant information, schedules, and tasks.</p>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+                        <div class="text-center mb-3">
+                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                        </div>
+                        <h5 class="mb-3">Importance</h5>
+                        <p class="features-icon-description"> UMS empowers educational institutions to operate efficiently, enhance transparency, and provide better services to their stakeholders. Whether it’s managing admissions, academic records, or financial transactions, UMS is the go-to solution for modern universities.</p>
                     </div>
                 </div>
             </div>
@@ -417,7 +565,7 @@
                 <div class="row align-items-center gx-0 gy-4 g-lg-5">
                     <div class="col-md-6 col-lg-5 col-xl-3">
                         <div class="mb-3 pb-1">
-                            <span class="badge bg-label-primary">Real Customers Reviews</span>
+                            <span class="badge bg-label-dribbble">Real Customers Reviews</span>
                         </div>
                         <h3 class="mb-1"><span class="section-title">What people say</span></h3>
                         <p class="mb-3 mb-md-5">
@@ -425,10 +573,10 @@
                             say about their experience.
                         </p>
                         <div class="landing-reviews-btns">
-                            <button id="reviews-previous-btn" class="btn btn-label-primary reviews-btn me-3 scaleX-n1-rtl" type="button">
+                            <button id="reviews-previous-btn" class="btn btn-label-dribbble reviews-btn me-3 scaleX-n1-rtl" type="button">
                                 <i class="ti ti-chevron-left ti-sm"></i>
                             </button>
-                            <button id="reviews-next-btn" class="btn btn-label-primary reviews-btn scaleX-n1-rtl" type="button">
+                            <button id="reviews-next-btn" class="btn btn-label-dribbble reviews-btn scaleX-n1-rtl" type="button">
                                 <i class="ti ti-chevron-right ti-sm"></i>
                             </button>
                         </div>
@@ -444,8 +592,7 @@
                                                     <img src="../../assets/img/front-pages/branding/logo-1.png" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
-                                                    “Vuexy is hands down the most useful front end Bootstrap theme I've ever used. I can't wait
-                                                    to use it again for my next project.”
+                                                    “UMS Pro: Without a doubt, the most indispensable solution for our university’s digital transformation. Its seamless interface, intuitive features, and robust functionality have revolutionized our administrative processes. From student enrollment to faculty management, UMS Pro has been a game-changer. I eagerly look forward to utilizing it in all our future endeavors.”
                                                 </p>
                                                 <div class="text-warning mb-3">
                                                     <i class="ti ti-star-filled ti-sm"></i>
@@ -473,8 +620,7 @@
                                                     <img src="../../assets/img/front-pages/branding/logo-2.png" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
-                                                    “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building
-                                                    dashboard sites on almost any project.”
+                                                    “UMS Flex: Unquestionably the most adaptable and dynamic solution for our university’s digital infrastructure. Whether it’s student records, faculty communication, or administrative dashboards, UMS Flex is my go-to choice. Its versatility empowers us to build efficient systems for any academic project.”
                                                 </p>
                                                 <div class="text-warning mb-3">
                                                     <i class="ti ti-star-filled ti-sm"></i>
@@ -502,8 +648,7 @@
                                                     <img src="../../assets/img/front-pages/branding/logo-3.png" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
-                                                    This template is really clean & well documented. The docs are really easy to understand and
-                                                    it's always easy to find a screenshot from their website.
+                                                    “UMS Clarity: A meticulously crafted solution that combines elegance with functionality. Its clean design and well-organized documentation make it a breeze for administrators, faculty, and students alike. Whether you’re navigating through student profiles or configuring system settings, UMS Clarity ensures a seamless experience. Plus, finding relevant screenshots is as effortless as a click.”
                                                 </p>
                                                 <div class="text-warning mb-3">
                                                     <i class="ti ti-star-filled ti-sm"></i>
@@ -531,8 +676,7 @@
                                                     <img src="../../assets/img/front-pages/branding/logo-4.png" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
-                                                    All the requirements for developers have been taken into consideration, so I’m able to build
-                                                    any interface I want.
+                                                    “UMS DevCraft: A developer’s dream come true! With meticulous attention to detail, UMS DevCraft caters to every coding need. Its robust architecture and well-documented APIs empower developers to craft custom interfaces effortlessly. Whether it’s designing student portals, faculty dashboards, or administrative tools, UMS DevCraft ensures a seamless development journey.”
                                                 </p>
                                                 <div class="text-warning mb-3">
                                                     <i class="ti ti-star-filled ti-sm"></i>
@@ -560,8 +704,7 @@
                                                     <img src="../../assets/img/front-pages/branding/logo-5.png" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
-                                                    “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building
-                                                    dashboard sites on almost any project.”
+                                                    “UMS Flex: Unquestionably the most adaptable and dynamic solution for our university’s digital infrastructure. Whether it’s student records, faculty communication, or administrative dashboards, UMS Flex is my go-to choice. Its versatility empowers us to build efficient systems for any academic project.”
                                                 </p>
                                                 <div class="text-warning mb-3">
                                                     <i class="ti ti-star-filled ti-sm"></i>
@@ -589,8 +732,7 @@
                                                     <img src="../../assets/img/front-pages/branding/logo-6.png" alt="client logo" class="client-logo img-fluid" />
                                                 </div>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nemo mollitia, ad eum
-                                                    officia numquam nostrum repellendus consequuntur!
+                                                    “UMS Ipsum: UMS Ipsum provides seamless integration, robust features, and unparalleled flexibility for academic institutions. Whether it’s student enrollment, faculty management, or administrative workflows, UMS Ipsum ensures a streamlined experience.”
                                                 </p>
                                                 <div class="text-warning mb-3">
                                                     <i class="ti ti-star-filled ti-sm"></i>
@@ -653,14 +795,14 @@
         <section id="landingTeam" class="section-py landing-team">
             <div class="container">
                 <div class="text-center mb-3 pb-1">
-                    <span class="badge bg-label-primary">Our Great Team</span>
+                    <span class="badge bg-label-dribbble">Our Great Team</span>
                 </div>
                 <h3 class="text-center mb-1"><span class="section-title">Supported</span> by Real People</h3>
-                <p class="text-center mb-md-5 pb-3">Who is behind these great-looking interfaces?</p>
+                <p class="text-center mb-md-5 pb-3">Who is behind these greatest-software?</p>
                 <div class="row gy-5 mt-2">
                     <div class="col-lg-3 col-sm-6">
                         <div class="card mt-3 mt-lg-0 shadow-none">
-                            <div class="bg-label-primary position-relative team-image-box">
+                            <div class="bg-label-dribbble position-relative team-image-box">
                                 <img src="../../assets/img/front-pages/landing-page/team-member-1.png" class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
                             </div>
                             <div class="card-body border border-top-0 border-label-primary text-center">
@@ -711,11 +853,11 @@
         <section id="landingPricing" class="section-py bg-body landing-pricing">
             <div class="container">
                 <div class="text-center mb-3 pb-1">
-                    <span class="badge bg-label-primary">Pricing Plans</span>
+                    <span class="badge bg-label-dribbble">Pricing Plans</span>
                 </div>
                 <h3 class="text-center mb-1"><span class="section-title">Tailored pricing plans</span> designed for you</h3>
                 <p class="text-center mb-4 pb-3">
-                    All plans include 40+ advanced tools and features to boost your product.<br />Choose the best plan to fit
+                    All plans include 40+ advanced tools and features. <br>Propel your university forward with UMS Accelerate! <br> Our feature-rich system is tailored to meet your institution’s unique needs.<br />Choose the best plan to fit
                     your needs.
                 </p>
                 <div class="text-center mb-5">
@@ -757,49 +899,50 @@
                                 <ul class="list-unstyled">
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Timeline
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Enrollment Management
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Basic search
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Student Information System
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Live chat widget
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Live chat
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Email marketing
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Parent notifications
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Custom Forms
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2">
+                                                <i class="ti ti-check ti-xs"></i></span>
+                                            <span>Course Management</span>
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Traffic analytics
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Curriculum Management
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
                                             Basic Support
                                         </h5>
                                     </li>
                                 </ul>
                                 <div class="d-grid mt-4 pt-3">
-                                    <a href="payment-page.html" class="btn btn-label-primary">Get Started</a>
+                                    <a href="payment-page.html" class="btn btn-label-dribbble">Get Started</a>
                                 </div>
                             </div>
                         </div>
@@ -808,11 +951,11 @@
 
                     <!-- Favourite Plan: Start -->
                     <div class="col-xl-4 col-lg-6">
-                        <div class="card border border-primary shadow-lg">
+                        <div class="card border border-primary shadow-lg" style="border-color: #ea4c89 !important;">
                             <div class="card-header">
                                 <div class="text-center">
                                     <img src="../../assets/img/front-pages/icons/plane.png" alt="plane icon" class="mb-4 pb-2" />
-                                    <h4 class="mb-1">Team</h4>
+                                    <h4 class="mb-1">Standard</h4>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <span class="price-monthly h1 text-primary fw-bold mb-0">$29</span>
                                         <span class="price-yearly h1 text-primary fw-bold mb-0 d-none">$22</span>
@@ -827,49 +970,50 @@
                                 <ul class="list-unstyled">
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            <span class="badge badge-center rounded-pill bg-dribbble p-0 me-2">
+                                                <i class="ti ti-check ti-xs"></i></span>
                                             Everything in basic
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Timeline with database
+                                            <span class="badge badge-center rounded-pill bg-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Fee Management
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Advanced search
+                                            <span class="badge badge-center rounded-pill bg-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Attendance Management
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Marketing automation
+                                            <span class="badge badge-center rounded-pill bg-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Faculty Payroll
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Advanced chatbot
+                                            <span class="badge badge-center rounded-pill bg-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Faculty Scheduling
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Campaign management
+                                            <span class="badge badge-center rounded-pill bg-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Communication Tools
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Collaboration tools
+                                            <span class="badge badge-center rounded-pill bg-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Real-Time Analytics
                                         </h5>
                                     </li>
                                 </ul>
                                 <div class="d-grid mt-4 pt-3">
-                                    <a href="payment-page.html" class="btn btn-primary">Get Started</a>
+                                    <a href="payment-page.html" class="btn btn-dribbble">Get Started</a>
                                 </div>
                             </div>
                         </div>
@@ -897,49 +1041,49 @@
                                 <ul class="list-unstyled">
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
                                             Everything in premium
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Timeline with database
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Personal Profiles
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Fuzzy search
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Library management
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            A/B testing sanbox
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Employee management
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
                                             Custom permissions
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Social media automation
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Centralized Examination
                                         </h5>
                                     </li>
                                     <li>
                                         <h5>
-                                            <span class="badge badge-center rounded-pill bg-label-primary p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
-                                            Sales automation tools
+                                            <span class="badge badge-center rounded-pill bg-label-dribbble p-0 me-2"><i class="ti ti-check ti-xs"></i></span>
+                                            Centralized Admission
                                         </h5>
                                     </li>
                                 </ul>
                                 <div class="d-grid mt-4 pt-3">
-                                    <a href="payment-page.html" class="btn btn-label-primary">Get Started</a>
+                                    <a href="payment-page.html" class="btn btn-label-dribbble">Get Started</a>
                                 </div>
                             </div>
                         </div>
@@ -1011,7 +1155,7 @@
         <section id="landingFAQ" class="section-py bg-body landing-faq">
             <div class="container">
                 <div class="text-center mb-3 pb-1">
-                    <span class="badge bg-label-primary">FAQ</span>
+                    <span class="badge bg-label-dribbble">FAQ</span>
                 </div>
                 <h3 class="text-center mb-1">Frequently asked <span class="section-title">questions</span></h3>
                 <p class="text-center mb-5 pb-3">Browse through these FAQs to find answers to commonly asked questions.</p>
@@ -1032,68 +1176,67 @@
 
                                 <div id="accordionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing
-                                        marzipan gummi bears macaroon dragée danish caramels powder. Bear claw dragée pastry topping
-                                        soufflé. Wafer gummi bears marshmallow pastry pie.
+                                        No, our pricing model is designed to provide value without additional charges for upgrades. Once you subscribe to a specific plan (Basic, Standard, or Enterprise), you’ll receive all future updates and enhancements as part of your subscription. We believe in continuous improvement and want to ensure that your UMS remains up-to-date and efficient.
                                     </div>
                                 </div>
                             </div>
                             <div class="card accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionTwo" aria-expanded="false" aria-controls="accordionTwo">
-                                        Do I need to purchase a license for each website?
+                                        What is a university management system?
                                     </button>
                                 </h2>
                                 <div id="accordionTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Dessert ice cream donut oat cake jelly-o pie sugar plum cheesecake. Bear claw dragée oat cake
-                                        dragée ice cream halvah tootsie roll. Danish cake oat cake pie macaroon tart donut gummies. Jelly
-                                        beans candy canes carrot cake. Fruitcake chocolate chupa chups.
+                                        A university management system (UMS) is a comprehensive software solution specifically
+                                        tailored for educational institutions. It helps universities manage various administrative tasks,
+                                        including student enrollment, course management, fee collection,
+                                        human resources, and more. UMS streamlines processes, enhances communication,
+                                        and ensures efficient operations within the university ecosystem
                                     </div>
                                 </div>
                             </div>
                             <div class="card accordion-item">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionThree" aria-expanded="false" aria-controls="accordionThree">
-                                        What is regular license?
+                                        Why is cloud-based UMS preferred over on-premises solutions?
                                     </button>
                                 </h2>
                                 <div id="accordionThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Regular license can be used for end products that do not charge users for access or service(access
-                                        is free and there will be no monthly subscription fee). Single regular license can be used for
-                                        single end product and end product can be used by you or your client. If you want to sell end
-                                        product to multiple clients then you will need to purchase separate license for each client. The
-                                        same rule applies if you want to use the same end product on multiple domains(unique setup). For
-                                        more info on regular license you can check official description.
+                                        Cloud-based UMS offers several advantages: <br>
+                                        <b>Accessibility: </b>You can access the system from anywhere with an internet connection. <br>
+                                        <b>Cost-effectiveness: </b> Cloud solutions eliminate the need for expensive on-premises infrastructure. <br>
+                                        <b>Scalability: </b> Cloud services can easily scale up or down based on your institution’s needs. <br>
+                                        <b>Security: </b>Cloud providers often have robust security measures in place to protect your data.
                                     </div>
                                 </div>
                             </div>
                             <div class="card accordion-item">
                                 <h2 class="accordion-header" id="headingFour">
                                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionFour" aria-expanded="false" aria-controls="accordionFour">
-                                        What is extended license?
+                                        What features should I look for in a UMS?
                                     </button>
                                 </h2>
                                 <div id="accordionFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis et aliquid quaerat possimus maxime!
-                                        Mollitia reprehenderit neque repellat deleniti delectus architecto dolorum maxime, blanditiis
-                                        earum ea, incidunt quam possimus cumque.
+                                        Essential features include: <br>
+                                        <b>Add-on Modules: </b> Customizable modules for enrollment, student information, course management, fee handling, and attendance management. <br>
+                                        <b>Workflow Optimization: </b> Automation, AI, and hands-on education management tools. <br>
+                                        <b>Real-Time Access: </b> Metrics for maintenance, attendance, and scheduling. <br>
+                                        <b>User-Friendly Interface: </b> Easy-to-use systems for administrators, students, parents, and staff.
                                     </div>
                                 </div>
                             </div>
                             <div class="card accordion-item">
                                 <h2 class="accordion-header" id="headingFive">
                                     <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#accordionFive" aria-expanded="false" aria-controls="accordionFive">
-                                        Which license is applicable for SASS application?
+                                        How can UMS benefit my university?
                                     </button>
                                 </h2>
                                 <div id="accordionFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi molestias exercitationem ab cum
-                                        nemo facere voluptates veritatis quia, eveniet veniam at et repudiandae mollitia ipsam quasi
-                                        labore enim architecto non!
+                                        UMS streamlines processes, reduces manual effort, enhances transparency, and improves overall efficiency. It empowers administrators, faculty, and students by providing a centralized platform for managing academic operations.
                                     </div>
                                 </div>
                             </div>
@@ -1110,8 +1253,8 @@
                 <div class="row align-items-center gy-5 gy-lg-0">
                     <div class="col-lg-6 text-center text-lg-start">
                         <h6 class="h2 text-primary fw-bold mb-1">Ready to Get Started?</h6>
-                        <p class="fw-medium mb-4">Start your project with a 14-day free trial</p>
-                        <a href="payment-page.html" class="btn btn-lg btn-primary">Get Started</a>
+                        <p class="fw-medium mb-4">“<b>Get Started with UMS:</b> Begin your journey toward streamlined operations and enhanced efficiency. Sign up now for a <span class="badge bg-label-success">14-day free trial</span> and experience the power of UMS firsthand. Manage student records, optimize workflows, and elevate your institution’s digital experience. Let’s transform education together!”</p>
+                        <a href="payment-page.html" class="btn btn-lg btn-dribbble">Get Started</a>
                     </div>
                     <div class="col-lg-6 pt-lg-5 text-center text-lg-end">
                         <img src="../../assets/img/front-pages/landing-page/cta-dashboard.png" alt="cta dashboard" class="img-fluid" />
@@ -1125,7 +1268,7 @@
         <section id="landingContact" class="section-py bg-body landing-contact">
             <div class="container">
                 <div class="text-center mb-3 pb-1">
-                    <span class="badge bg-label-primary">Contact US</span>
+                    <span class="badge bg-label-dribbble">Contact US</span>
                 </div>
                 <h3 class="text-center mb-1"><span class="section-title">Let's work</span> together</h3>
                 <p class="text-center mb-4 mb-lg-5 pb-md-3">Any question or remark? just write us a message</p>
@@ -1137,7 +1280,7 @@
                                 <div class="row gy-3 gx-md-4">
                                     <div class="col-md-6 col-lg-12 col-xl-6">
                                         <div class="d-flex align-items-center">
-                                            <div class="badge bg-label-primary rounded p-2 me-2"><i class="ti ti-mail ti-sm"></i></div>
+                                            <div class="badge bg-label-dribbble rounded p-2 me-2"><i class="ti ti-mail ti-sm"></i></div>
                                             <div>
                                                 <p class="mb-0">Email</p>
                                                 <h5 class="mb-0">
@@ -1184,7 +1327,7 @@
                                             <textarea id="contact-form-message" class="form-control" rows="8" placeholder="Write a message"></textarea>
                                         </div>
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-primary">Send inquiry</button>
+                                            <button type="submit" class="btn btn-dribbble">Send inquiry</button>
                                         </div>
                                     </div>
                                 </form>
@@ -1206,24 +1349,19 @@
                 <div class="row gx-0 gy-4 g-md-5">
                     <div class="col-lg-5">
                         <a href="landing-page.html" class="app-brand-link mb-4">
-                            <span class="app-brand-logo demo">
-                                <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z" fill="#7367F0" />
-                                    <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z" fill="#161616" />
-                                    <path opacity="0.06" fill-rule="evenodd" clip-rule="evenodd" d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z" fill="#161616" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z" fill="#7367F0" />
-                                </svg>
+                            <span class="app-brand-logo" style="width: 69px;">
+                                <img src="{{asset('assets/img/branding/logo-removebg-preview.png')}}" class="img-fluid rounded-circle" alt="UMS">
                             </span>
-                            <span class="app-brand-text demo footer-link fw-bold ms-2 ps-1">Vuexy</span>
+                            <span class="app-brand-text demo footer-link fw-bold ms-2 ps-1">UMS</span>
                         </a>
                         <p class="footer-text footer-logo-description mb-4">
-                            Most developer friendly & highly customisable Admin Dashboard Template.
+                            A meticulously crafted solution that combines elegance with functionality. Its clean design and well-organized documentation make it a breeze for administrators, faculty, and students alike.
                         </p>
                         <form class="footer-form">
                             <label for="footer-email" class="small">Subscribe to newsletter</label>
                             <div class="d-flex mt-1">
                                 <input type="email" class="form-control rounded-0 rounded-start-bottom rounded-start-top" id="footer-email" placeholder="Your email" />
-                                <button type="submit" class="btn btn-primary shadow-none rounded-0 rounded-end-bottom rounded-end-top">
+                                <button type="submit" class="btn btn-dribbble shadow-none rounded-0 rounded-end-bottom rounded-end-top">
                                     Subscribe
                                 </button>
                             </div>
@@ -1233,19 +1371,19 @@
                         <h6 class="footer-title mb-4">Demos</h6>
                         <ul class="list-unstyled">
                             <li class="mb-3">
-                                <a href="../vertical-menu-template/" target="_blank" class="footer-link">Vertical Layout</a>
+                                <a href="../vertical-menu-template/" target="_blank" class="footer-link">Website</a>
                             </li>
                             <li class="mb-3">
-                                <a href="../horizontal-menu-template/" target="_blank" class="footer-link">Horizontal Layout</a>
+                                <a href="../horizontal-menu-template/" target="_blank" class="footer-link">Personal profile</a>
                             </li>
                             <li class="mb-3">
-                                <a href="../vertical-menu-template-bordered/" target="_blank" class="footer-link">Bordered Layout</a>
+                                <a href="../vertical-menu-template-bordered/" target="_blank" class="footer-link">Student management</a>
                             </li>
                             <li class="mb-3">
-                                <a href="../vertical-menu-template-semi-dark/" target="_blank" class="footer-link">Semi Dark Layout</a>
+                                <a href="../vertical-menu-template-semi-dark/" target="_blank" class="footer-link">Employee management</a>
                             </li>
                             <li class="mb-3">
-                                <a href="../vertical-menu-template-dark/" target="_blank" class="footer-link">Dark Layout</a>
+                                <a href="../vertical-menu-template-dark/" target="_blank" class="footer-link">Library management</a>
                             </li>
                         </ul>
                     </div>
@@ -1256,7 +1394,7 @@
                                 <a href="pricing-page.html" class="footer-link">Pricing</a>
                             </li>
                             <li class="mb-3">
-                                <a href="payment-page.html" class="footer-link">Payment<span class="badge rounded bg-primary ms-2">New</span></a>
+                                <a href="payment-page.html" class="footer-link">Payment<span class="badge rounded bg-dribbble ms-2">New</span></a>
                             </li>
                             <li class="mb-3">
                                 <a href="checkout-page.html" class="footer-link">Checkout</a>
@@ -1304,6 +1442,42 @@
                 </div>
             </div>
         </div>
+        <!-- chat app -->
+
+        <div class="chatbot">
+            <button type="button" class="btn-label-info rounded-circle" id="chat-toggle">
+                <i class="ti ti-brand-wechat" style="font-size: 38px;"></i>
+            </button>
+            <div class="chat-window">
+                <div class="chat-header d-flex justify-content-between">
+                    <div class="d-flex">
+                        <img src="{{asset('assets/img/avatars/_27b86870-c156-4fa2-bd43-384e33063f48.jpg')}}" class="chat-avater img img-fluid rounded rounded-circle me-3">
+                        Live Support
+                    </div>
+                    <button class="btn btn-sm text-white d-flex" id="chat-hide">
+                        <i class="ti ti-minus"></i>
+                    </button>
+                </div>
+                <div class="chat-body pt-5 bg-opacity-75 bg-body-tertiary h-100 rounded-3">
+                    <!-- Chat messages go here -->
+                    <div class="chat-message w-75 ms-2 bg-opacity-75 bg-dribbble rounded-3 p-2 text-bg-dark text-start font-monospace">
+                        Hi their, I am Moni. How can I help you?</div>
+                    <div class="chat-message w-75 ms-2 bg-opacity-75 rounded-3 p-2 text-bg-dark font-monospace mt-3 text-end float-end me-2" style="background-color: #6610f2ab !important;">
+                        Hi their, I am Moni. How can I help you?</div>
+                </div>
+                <div class="chat-footer px-2 rounded shadow-lg">
+                    <div class="d-flex justify-content-between align-items-center px-1 rounded">
+                        <textarea name="message" class="form-control bg-transparent border-0" id="message-box" placeholder="Type a message..." rows="1"></textarea>
+                        <div>
+                            <button style="width: 39px; height: 39px;" type="button" class="btn send-btn waves-effect waves-light btn-twitter rounded-circle">
+                                <!-- <i class="ti ti-send-2"></i> -->
+                                <i class="ti ti-send"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <!-- Footer: End -->
 
@@ -1324,6 +1498,19 @@
 
     <!-- Page JS -->
     <script src="{{asset('assets/js/front-page-landing.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#chat-toggle').click(function() {
+                $('.chat-window').slideToggle();
+                $(this).slideToggle();
+            });
+            $('#chat-hide').click(function() {
+                $('.chat-window').slideToggle();
+                $("#chat-toggle").slideToggle();
+            });
+        });
+    </script>
 </body>
 
 </html>
