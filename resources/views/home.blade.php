@@ -248,13 +248,13 @@
                                         </div>
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link mega-dropdown-link" href="../vertical-menu-template/auth-login-basic.html" target="_blank">
+                                                <a class="nav-link mega-dropdown-link" href="#l" target="_blank">
                                                     <i class="ti ti-circle me-1"></i>
                                                     Login (Basic)
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link mega-dropdown-link" href="../vertical-menu-template/auth-login-cover.html" target="_blank">
+                                                <a class="nav-link mega-dropdown-link" href="#" target="_blank">
                                                     <i class="ti ti-circle me-1"></i>
                                                     Login (Cover)
                                                 </a>
@@ -429,7 +429,7 @@
                         </h2>
                         <div class="landing-hero-btn d-inline-block position-relative">
                             <span class="hero-btn-item position-absolute d-none d-md-flex text-heading">Join community
-                                <img src="../../assets/img/front-pages/icons/Join-community-arrow.png" alt="Join community arrow" class="scaleX-n1-rtl" /></span>
+                                <img src="{{asset('assets/img/front-pages/icons/Join-community-arrow.png')}}" alt="Join community arrow" class="scaleX-n1-rtl" /></span>
                             <a href="#landingPricing" class="btn btn-dribbble btn-lg">Get early access</a>
                         </div>
                     </div>
@@ -463,7 +463,7 @@
                 <div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/laptop.png" alt="laptop charging" />
+                            <img src="{{asset('assets/img/front-pages/icons/laptop.png')}}" alt="laptop charging" />
                         </div>
                         <h5 class="mb-3">Centralized Admission</h5>
                         <p class="features-icon-description">
@@ -472,7 +472,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/rocket.png" alt="transition up" />
+                            <img src="{{asset('assets/img/front-pages/icons/rocket.png')}}" alt="transition up" />
                         </div>
                         <h5 class="mb-3">Centralized Examination</h5>
                         <p class="features-icon-description">
@@ -481,7 +481,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/paper.png" alt="edit" />
+                            <img src="{{asset('assets/img/front-pages/icons/paper.png')}}" alt="edit" />
                         </div>
                         <h5 class="mb-3">Attendance Tracking</h5>
                         <p class="features-icon-description">
@@ -490,7 +490,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/check.png" alt="3d select solid" />
+                            <img src="{{asset('assets/img/front-pages/icons/check.png')}}" alt="3d select solid" />
                         </div>
                         <h5 class="mb-3">Course Management</h5>
                         <p class="features-icon-description">
@@ -499,56 +499,56 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/user.png" alt="lifebelt" />
+                            <img src="{{asset('assets/img/front-pages/icons/user.png')}}" alt="lifebelt" />
                         </div>
                         <h5 class="mb-3">Excellent Support</h5>
                         <p class="features-icon-description">An easy-to-follow doc with lots of references and code examples.</p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                            <img src="{{asset('assets/img/front-pages/icons/keyboard.png')}}" alt="google docs" />
                         </div>
                         <h5 class="mb-3">Student Information System</h5>
                         <p class="features-icon-description">Stores and manages student profiles, academic records, and personal details. It ensures data accuracy and privacy.</p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                            <img src="{{asset('assets/img/front-pages/icons/keyboard.png')}}" alt="google docs" />
                         </div>
                         <h5 class="mb-3">Faculty Management</h5>
                         <p class="features-icon-description">Allows faculty members to update their profiles, view teaching schedules, and communicate with students.</p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                            <img src="{{asset('assets/img/front-pages/icons/keyboard.png')}}" alt="google docs" />
                         </div>
                         <h5 class="mb-3">Financial Management</h5>
                         <p class="features-icon-description">Handles fee collection, expense tracking, and budget allocation. Generates financial reports for analysis.</p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                            <img src="{{asset('assets/img/front-pages/icons/keyboard.png')}}" alt="google docs" />
                         </div>
                         <h5 class="mb-3">Library Integration</h5>
                         <p class="features-icon-description">Tracks book inventory, borrowing, and returns. Students can search for available resources and reserve books online.</p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                            <img src="{{asset('assets/img/front-pages/icons/keyboard.png')}}" alt="google docs" />
                         </div>
                         <h5 class="mb-3">Communication Portal</h5>
                         <p class="features-icon-description">Enables seamless communication between students, faculty, and administrators. Announcements, notifications, and event updates are centralized.</p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                            <img src="{{asset('assets/img/front-pages/icons/keyboard.png')}}" alt="google docs" />
                         </div>
                         <h5 class="mb-3">Personal Profiles</h5>
                         <p class="features-icon-description"> Each user (student, faculty, or staff) has a personalized dashboard displaying relevant information, schedules, and tasks.</p>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center features-icon-box">
                         <div class="text-center mb-3">
-                            <img src="../../assets/img/front-pages/icons/keyboard.png" alt="google docs" />
+                            <img src="{{asset('assets/img/front-pages/icons/keyboard.png')}}" alt="google docs" />
                         </div>
                         <h5 class="mb-3">Importance</h5>
                         <p class="features-icon-description"> UMS empowers educational institutions to operate efficiently, enhance transparency, and provide better services to their stakeholders. Whether it’s managing admissions, academic records, or financial transactions, UMS is the go-to solution for modern universities.</p>
