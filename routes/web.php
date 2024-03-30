@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('ums.front');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -27,5 +27,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-require __DIR__.'/auth.php';
+// front controller
+Route::prefix('/ums/')->name('ums.')->group(function () {
+    Route::controller(\App\Http\Controllers\Front\FreeTrialController::class)->group(function () {
+        Route::get('free-tiral', 'index')->name('trial.index');
+    });
+});
+require __DIR__ . '/auth.php';
